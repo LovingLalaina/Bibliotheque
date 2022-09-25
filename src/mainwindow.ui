@@ -1,0 +1,3087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion de bibliotheque</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>50</number>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*#centralWidget
+{
+	border-image:url(:/images/old book.jpg);
+}*/</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#stackedWidget
+{
+background-image:url(:/images/water.jpg);
+}
+
+
+/* --------------bouton  principale----------------------------------------------------------------------*/
+#boutonPretPrincipale,#boutonLecteurPrincipale,#boutonLivrePrincipale
+{
+font: 26pt &quot;MS Shell Dlg 2&quot;;
+
+border-width:1px;
+border-style: groove;
+
+border-color: white;
+border-radius: 50%;
+border-image: url(:/images/bois2.jpg);
+box-shadow: 10px 15px 0px #000000;
+color:white;
+}
+
+QPushButton:hover#boutonPretPrincipale,QPushButton:hover#boutonLecteurPrincipale,QPushButton:hover#boutonLivrePrincipale
+{
+font:30pt &quot;MS Shell Dlg 2&quot;;
+transition: 2s;
+color: rgb(255, 254, 238);
+}
+
+
+QPushButton#boutonQuitter
+{
+border-radius: 30px;
+border-image:url(:/images/marbre.jpg);
+}
+
+ QPushButton:hover#boutonQuitter
+{
+border-image:url(:/images/bois2.jpg);
+}
+
+
+/*---------------------------page Livre--------------------------------------------------------*/
+
+QFrame #frame_2, #frame,#frame_3,#frame_7,#frame_8,#frame_5,#frame_4,#frame_6,#frame_8,#frame_9,#frame_10,#frame_11
+{
+background-color: rgb(0,0,0);
+border-radius: 30%;
+ }
+
+ #auteurLabel,#dateLabel, #designLabel,#numeroLabel,#nomLecteur,#numeroLecteur,#numeroLecteur_3
+{
+color:rgb(0, 172, 234);
+
+	font: 63 16pt &quot;Segoe UI Semibold&quot;;
+}
+
+#dateLivreAjout,#auteurLivreAjout, #numeroLivreAjout, #designLivreAjout,#dateLivreModifier,#auteurLivreModifier, #numeroLivreModifier,#designLivreModifier,#numeroLivreSupprimer,#nomLecteurAjout,#numeroLivrePretAjout,#numeroLecteurPretAjout,#nomLivrePretAjout,#numeroLecteurPretAjout,#numeroLivrePretSupprimer,#nomLecteurPretSituation,#numeroLecteurPretSituation,#numeroLecteurPretModifier , #numeroPretModifier,#datePretModifier
+{
+color:white;
+background-color:black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+border-bottom: 1px solid white;
+border-left:none;
+border-top : none;
+border-right: none;
+}
+#numeroLivrePretModifier,#numeroLecteurPretModifier
+{
+color:white;
+background-color:black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+border-bottom: 1px solid white;
+border-left:none;
+border-top : none;
+border-right: none;}
+
+#numeroLivrePret_2,#numeroLecteurPret_2, #numeroLivrePret_3,#numeroLecteurPret_3, #numeroLivrePret_4,#numeroLecteurPret_4,#numeroLivrePret_5
+{
+
+color:rgb(0, 172, 234);
+
+font: 63 16pt &quot;Segoe UI Semibold&quot;;
+}
+
+
+ #afficherPret , #ajouterPret,#supprimerPret, #modifierPret, #ajouterLecteur, #modifierLecteur , #supprimerLecteur , #ajouterLivre , #modifierLivre , #supprimerLivre
+{
+border-radius: 10px;
+background-color: rgb(0, 172, 234);
+color: white;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QPushButton:hover#afficherPret , QPushButton:hover#ajouterPret , QPushButton:hover#modifierPret , QPushButton:hover#supprimerPret , QPushButton:hover#ajouterLecteur , QPushButton:hover#modifierLecteur, QPushButton:hover#supprimerLecteur , QPushButton:hover#ajouterLivre , QPushButton:hover#modifierLivre , QPushButton:hover#supprimerLivre
+{
+background-color: white;
+transition:2s;
+color: rgb(0, 172, 234);
+ }
+
+/*___________________________Lecteur___________________________________*/
+
+
+
+
+#cercleLecteur
+{
+border-radius: 250px;
+border:1px solid black;
+background-color: black;
+}
+
+#boutonRetourLecteur
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#boutonRetourLecteur
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+			/*---------------------------	LIVRE--------------------------*/
+#cercleLivre
+{
+border-radius: 250px;
+border:1px solid black;
+background-color: black;
+}
+
+#boutonRetourLivre
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#boutonRetourLivre
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+#boutonModifierLivre,#boutonSupprimerLivre,#boutonAjoutLivre, #boutonModifierLecteur , #boutonAjoutLecteur , #boutonSupprimerLecteur
+{
+border-radius:10px;
+border: 1px solid white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 #ffffff, stop: 0.4 #00acea,stop: 0.7 #00acea, stop: 1 #ffffff);
+	font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+color: white;
+}
+
+QPushButton:hover#boutonModifierLivre , QPushButton:hover#boutonAjoutLecteur , QPushButton:hover#boutonModifierLecteur , QPushButton:hover#boutonSupprimerLecteur
+{
+font: 75 18pt &quot;MS Shell Dlg 2&quot;;
+transition: 2s;
+}
+
+QPushButton:hover#boutonSupprimerLivre
+{
+font: 75 18pt &quot;MS Shell Dlg 2&quot;;
+transition: 2s;
+}
+
+QPushButton:hover#boutonAjoutLivre
+{
+font: 75 18pt &quot;MS Shell Dlg 2&quot;;
+transition: 2s;
+}
+
+#retourLivreAjout
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#retourLivreAjout
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+
+#retourLivreSupprimer
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#retourLivreSupprimer
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+
+#retourLivreModifier
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#retourLivreModifier
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+#boutonRetourPret
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 35px;
+background-color:white; 
+}
+
+QPushButton:hover#boutonRetourPret
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+#boutonAjoutPret,#boutonSuppressionPret,#boutonModificationPret,#boutonSituationPret
+{
+border-radius:20px;
+border: 2px inset white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 #00acea,stop: 0.2 #ffffff, stop: 0.8 #ffffff,stop: 1 #00acea);
+
+	font: 75 16pt &quot;Myriad Pro&quot;;
+}
+
+QPushButton:hover#boutonModificationPret
+{
+
+transition: 2s;
+border: 2px inset #00acea;
+
+}
+
+QPushButton:hover#boutonAjoutPret
+{
+
+transition: 2s;
+border: 2px inset #00acea;
+
+}
+
+QPushButton:hover#boutonSituationPret
+{
+
+transition: 2s;
+border: 2px inset #00acea;
+
+}
+
+QPushButton:hover#boutonSuppressionPret, QPushButton:hover#boutonSituationPret, QPushButton:hover#boutonModificationPret, QPushButton:hover#boutonAjoutPret 
+{
+font: 75 18pt &quot;Myriad Pro&quot;;
+transition: 2s;
+border: 2px inset #00acea;
+
+}
+
+#numeroLivrePret
+{
+color:rgb(0, 172, 234);
+font: 63 16pt &quot;Segoe UI Semibold&quot;;
+}
+
+#numeroLecteurPret
+{
+
+color:rgb(0, 172, 234);
+font: 63 16pt &quot;Segoe UI Semibold&quot;;
+}
+
+#numeroLecteurAjout,#numeroLecteurModifier,#numeroLecteurSupprimer
+{
+placeholder:&quot;entrer le numero&quot;;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+
+
+color:white;
+background-color:black;
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+border-bottom: 1px solid white;
+border-left:none;
+border-top : none;
+border-right: none;
+}
+
+#auteurLabel_2,#dateLabel_2, #designLabel_2,#numeroLabel_2,#nomLecteur_2,#numeroLecteur_2
+{
+color:rgb(0, 172, 234);
+
+	font: 63 16pt &quot;Segoe UI Semibold&quot;;
+}
+
+#dateEditer_2,#auteurEdit_2, #numeroEdit_2, #designEdit_2,#nomLecteurModifier,#NumeroLivrePretEdit_2,#NumeroLecteurPretEdit_2
+{
+color:white;
+background-color:black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+
+border-bottom: 1px solid white;
+border-left:none;
+border-top : none;
+border-right: none;
+}
+
+#numeroLabel_3
+{
+color:rgb(0, 172, 234);
+
+	font: 63 16pt &quot;Segoe UI Semibold&quot;;
+}
+
+#numeroEdit_3
+{
+
+color:white;
+background-color:black;
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+border-bottom: 1px solid white;
+border-left:none;
+border-top : none;
+border-right: none;
+}
+
+QPushButton#boutonLivre
+{
+background-color:white;
+border:4px solid black;
+border-radius: 100px;
+}
+
+
+QPushButton#boutonLivre_2
+{
+background-color:white;
+border:4px solid black;
+border-radius: 100px;
+}
+
+
+QPushButton#boutonLivre_3
+{
+background-color:white;
+border:4px solid black;
+border-radius: 75px;
+}
+/*--------------------------------LECTEUR---------------------------------------*/
+
+#ajoutLecteur
+{
+border-radius:10px;
+border: 1px solid white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 #ffffff, stop: 0.4 #00acea,stop: 0.7 #00acea, stop: 1 #ffffff);
+	font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+color: white;
+}
+
+QPushButton:hover#supprimeLecteur
+{
+font: 75 18pt &quot;MS Shell Dlg 2&quot;;
+transition: 2s;
+}
+
+QPushButton:hover#ajoutLecteur
+{
+font: 75 18pt &quot;MS Shell Dlg 2&quot;;
+transition: 2s;
+}
+
+
+#retourLecteurAjout
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#retourLecteurAjout
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+
+#retourLecteurModifier
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#retourLecteurModifier
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+
+#retourLecteurSupprimer
+{
+border: 2px solid rgb(0, 172, 234);
+border-radius: 15px;
+background-color:white; 
+}
+
+QPushButton:hover#retourLecteurSupprimer
+{
+border: 2px solid white;
+transition:2s;
+background-color: rgb(0, 172, 234);
+}
+
+
+#imageLecteur
+{
+border-radius: 50px;
+border:1px solid black;
+background-color: white;
+}
+
+
+#imageLecteur_2
+{
+border-radius: 50px;
+border:1px solid black;
+background-color: white;
+}
+
+
+#imageLecteur_3
+{
+border-radius: 50px;
+border:1px solid black;
+background-color: white;
+}
+
+#modificationLivreLabel,#suppressionLivreLabel,#ajouterLivreLabel,#modificationLecteurLabel,#suppressionLecteurLabel,#ajouterLecteurLabel
+{
+/*background-color:rgb(0, 172, 234);*/
+color: white;
+font: 30pt &quot;Tw Cen MT Condensed Extra Bold&quot;;
+}
+
+#pret,#pret_2,#pret_3
+
+{
+border-radius: 50px;
+border:1px solid black;
+background-color: white;
+}
+
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="pagePrincipale">
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(:/images/old book.jpg);</string>
+     </property>
+     <widget class="QPushButton" name="boutonLivrePrincipale">
+      <property name="geometry">
+       <rect>
+        <x>225</x>
+        <y>250</y>
+        <width>350</width>
+        <height>120</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;livres&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Livre</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="boutonLecteurPrincipale">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>110</y>
+        <width>350</width>
+        <height>120</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;lecteurs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/*#bouton_4
+{
+font: 50pt &quot;MS Shell Dlg 2&quot;;
+border: solid 40px white;
+border-top-left-radius: 100%;
+border-radius: 50%;
+
+background-image: url(:/images/bois2.jpg);
+/*background-color:white;
+padding left: 20px;
+color:white;
+}
+
+QPushButton:hover#bouton_4
+{
+font:55pt &quot;MS Shell Dlg 2&quot;;
+transition: 2s;
+color: rgb(255, 254, 238);
+}*/</string>
+      </property>
+      <property name="text">
+       <string>Lecteur</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="boutonPretPrincipale">
+      <property name="geometry">
+       <rect>
+        <x>225</x>
+        <y>400</y>
+        <width>350</width>
+        <height>120</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;prêts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Prêt</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="boutonQuitter">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>500</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Quitter&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="sourceimage.qrc">
+        <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>boutonLivrePrincipale</zorder>
+     <zorder>boutonPretPrincipale</zorder>
+     <zorder>boutonQuitter</zorder>
+     <zorder>boutonLecteurPrincipale</zorder>
+    </widget>
+    <widget class="QWidget" name="pageLivre">
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QStackedWidget" name="stackedWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>900</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pageLivrePrincipale">
+       <widget class="QPushButton" name="boutonModifierLivre">
+        <property name="geometry">
+         <rect>
+          <x>275</x>
+          <y>260</y>
+          <width>280</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonSupprimerLivre">
+        <property name="geometry">
+         <rect>
+          <x>275</x>
+          <y>375</y>
+          <width>280</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonRetourLivre">
+        <property name="geometry">
+         <rect>
+          <x>700</x>
+          <y>500</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonAjoutLivre">
+        <property name="geometry">
+         <rect>
+          <x>275</x>
+          <y>150</y>
+          <width>280</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Nouveau</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="cercleLivre">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>50</y>
+          <width>500</width>
+          <height>500</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>400</width>
+          <height>400</height>
+         </size>
+        </property>
+       </widget>
+       <zorder>boutonRetourLivre</zorder>
+       <zorder>cercleLivre</zorder>
+       <zorder>boutonAjoutLivre</zorder>
+       <zorder>boutonModifierLivre</zorder>
+       <zorder>boutonSupprimerLivre</zorder>
+      </widget>
+      <widget class="QWidget" name="pageLivreAjout">
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>200</y>
+          <width>800</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLabel">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>30</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>16</pointsize>
+           <weight>7</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="auteurLabel">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>130</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Auteur</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="designLabel">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>30</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Design</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="dateLabel">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>130</y>
+           <width>231</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Date d'édition</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ajouterLivre">
+         <property name="geometry">
+          <rect>
+           <x>225</x>
+           <y>230</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Enregistrer</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLivreAjout">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="auteurLivreAjout">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>180</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="dateLivreAjout">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>180</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="designLivreAjout">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>80</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+        </widget>
+        <zorder>designLabel</zorder>
+        <zorder>dateLabel</zorder>
+        <zorder>ajouterLivre</zorder>
+        <zorder>dateLivreAjout</zorder>
+        <zorder>designLivreAjout</zorder>
+        <zorder>numeroLabel</zorder>
+        <zorder>numeroLivreAjout</zorder>
+        <zorder>auteurLabel</zorder>
+        <zorder>auteurLivreAjout</zorder>
+       </widget>
+       <widget class="QTableWidget" name="tableLivreAjout">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>550</y>
+          <width>1000</width>
+          <height>300</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color : rgb( 0, 0, 0);</string>
+        </property>
+        <column>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Design</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Auteur</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Edition</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Disponible</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nombre Pret</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="retourLivreAjout">
+        <property name="geometry">
+         <rect>
+          <x>1070</x>
+          <y>30</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonLivre">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>80</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#RaccourciLivre
+{
+
+background-color: white;
+border-color: solid 10px white;
+border-radius:  50%;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/open-book.png</normaloff>:/images/open-book.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ajouterLivreLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1200</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>                           Ajouter des Livres</string>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+       <zorder>frame_2</zorder>
+       <zorder>tableLivreAjout</zorder>
+       <zorder>boutonLivre</zorder>
+       <zorder>ajouterLivreLabel</zorder>
+       <zorder>retourLivreAjout</zorder>
+      </widget>
+      <widget class="QWidget" name="pageLivreModifier">
+       <widget class="QTableWidget" name="tableLivreModifier">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>550</y>
+          <width>1000</width>
+          <height>300</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color : rgb( 0, 0, 0);</string>
+        </property>
+        <column>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Auteur</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Design</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Edition</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Disponible</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nombre prêt</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="retourLivreModifier">
+        <property name="geometry">
+         <rect>
+          <x>1070</x>
+          <y>30</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_7">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>200</y>
+          <width>800</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLabel_2">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>30</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>16</pointsize>
+           <weight>7</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="auteurLabel_2">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>130</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Auteur</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="designLabel_2">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>30</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Design</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="dateLabel_2">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>130</y>
+           <width>231</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Date d'édition</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="modifierLivre">
+         <property name="geometry">
+          <rect>
+           <x>225</x>
+           <y>230</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLivreModifier">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>80</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="auteurLivreModifier">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>180</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="dateLivreModifier">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>180</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="designLivreModifier">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>80</y>
+           <width>280</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="boutonLivre_2">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>80</y>
+          <width>200</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#RaccourciLivre
+{
+
+background-color: white;
+border-color: solid 10px white;
+border-radius:  50%;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/open-book.png</normaloff>:/images/open-book.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>150</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="modificationLivreLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1200</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>                       Modification des Livres</string>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+       <zorder>tableLivreModifier</zorder>
+       <zorder>frame_7</zorder>
+       <zorder>boutonLivre_2</zorder>
+       <zorder>modificationLivreLabel</zorder>
+       <zorder>retourLivreModifier</zorder>
+      </widget>
+      <widget class="QWidget" name="pageLivreSupprimer">
+       <widget class="QPushButton" name="boutonLivre_3">
+        <property name="geometry">
+         <rect>
+          <x>525</x>
+          <y>100</y>
+          <width>150</width>
+          <height>150</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#RaccourciLivre
+{
+
+background-color: white;
+border-color: solid 10px white;
+border-radius:  50%;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/open-book.png</normaloff>:/images/open-book.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_8">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>200</y>
+          <width>500</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLabel_3">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>30</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>16</pointsize>
+           <weight>7</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="supprimerLivre">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>160</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLivreSupprimer">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>90</y>
+           <width>381</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QTableWidget" name="tableLivreSupprimer">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>550</y>
+          <width>1000</width>
+          <height>300</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color : rgb( 0, 0, 0);</string>
+        </property>
+        <column>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Auteur</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Design</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Edition</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Disponible</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nombre prêt</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="retourLivreSupprimer">
+        <property name="geometry">
+         <rect>
+          <x>1070</x>
+          <y>30</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="suppressionLivreLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1200</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>                       Suppression des Livres</string>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+       <zorder>frame_8</zorder>
+       <zorder>tableLivreSupprimer</zorder>
+       <zorder>boutonLivre_3</zorder>
+       <zorder>suppressionLivreLabel</zorder>
+       <zorder>retourLivreSupprimer</zorder>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pageLecteur">
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QStackedWidget" name="stackedWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1200</width>
+        <height>900</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pageLecteurPrincipale">
+       <widget class="QPushButton" name="cercleLecteur">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>50</y>
+          <width>500</width>
+          <height>500</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>125</width>
+          <height>125</height>
+         </size>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonModifierLecteur">
+        <property name="geometry">
+         <rect>
+          <x>275</x>
+          <y>260</y>
+          <width>280</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonSupprimerLecteur">
+        <property name="geometry">
+         <rect>
+          <x>275</x>
+          <y>375</y>
+          <width>280</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonRetourLecteur">
+        <property name="geometry">
+         <rect>
+          <x>700</x>
+          <y>500</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonAjoutLecteur">
+        <property name="geometry">
+         <rect>
+          <x>275</x>
+          <y>150</y>
+          <width>280</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nouveau</string>
+        </property>
+       </widget>
+       <zorder>cercleLecteur</zorder>
+       <zorder>boutonSupprimerLecteur</zorder>
+       <zorder>boutonRetourLecteur</zorder>
+       <zorder>boutonAjoutLecteur</zorder>
+       <zorder>boutonModifierLecteur</zorder>
+      </widget>
+      <widget class="QWidget" name="pageLecteurAjout">
+       <widget class="QFrame" name="frame">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>170</y>
+          <width>400</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLecteur">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLecteurAjout">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>70</y>
+           <width>300</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="nomLecteur">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>140</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nomLecteurAjout">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>180</y>
+           <width>300</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ajouterLecteur">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>250</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Enregistrer</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="imageLecteur">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>100</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/boss.png</normaloff>:/images/boss.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>75</width>
+          <height>75</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retourLecteurAjout">
+        <property name="geometry">
+         <rect>
+          <x>1070</x>
+          <y>30</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="ajouterLecteurLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1200</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>                        Ajouter des lecteurs</string>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableLecteurAjout">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>520</y>
+          <width>531</width>
+          <height>371</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pageLecteurModification">
+       <widget class="QPushButton" name="retourLecteurModifier">
+        <property name="geometry">
+         <rect>
+          <x>1070</x>
+          <y>30</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="imageLecteur_2">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>100</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/boss.png</normaloff>:/images/boss.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>75</width>
+          <height>75</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_5">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>170</y>
+          <width>400</width>
+          <height>311</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLecteur_2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLecteurModifier">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>70</y>
+           <width>300</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="nomLecteur_2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>140</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nomLecteurModifier">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>180</y>
+           <width>300</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="modifierLecteur">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>250</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Modifier</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="modificationLecteurLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1200</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>                    Modification des Lecteurs</string>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableLecteurModifier">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>520</y>
+          <width>451</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+        </column>
+       </widget>
+       <zorder>retourLecteurModifier</zorder>
+       <zorder>frame_5</zorder>
+       <zorder>imageLecteur_2</zorder>
+       <zorder>modificationLecteurLabel</zorder>
+       <zorder>tableLecteurModifier</zorder>
+      </widget>
+      <widget class="QWidget" name="pageLecteurSuppression">
+       <widget class="QPushButton" name="imageLecteur_3">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>140</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/boss.png</normaloff>:/images/boss.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>75</width>
+          <height>75</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_6">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>200</y>
+          <width>400</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLecteur_3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>40</y>
+           <width>125</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLecteurSupprimer">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>90</y>
+           <width>300</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="supprimerLecteur">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>170</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Supprimer</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="retourLecteurSupprimer">
+        <property name="geometry">
+         <rect>
+          <x>1070</x>
+          <y>30</y>
+          <width>70</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="suppressionLecteurLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1200</width>
+          <height>70</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>                       Suppression des Lecteurs</string>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableLecteurSupprimer">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>470</y>
+          <width>491</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <column>
+         <property name="text">
+          <string>Numero</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+        </column>
+       </widget>
+       <zorder>frame_6</zorder>
+       <zorder>retourLecteurSupprimer</zorder>
+       <zorder>imageLecteur_3</zorder>
+       <zorder>suppressionLecteurLabel</zorder>
+       <zorder>tableLecteurSupprimer</zorder>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pagePret">
+     <property name="toolTip">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <widget class="QPushButton" name="boutonAjoutPret">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>270</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Prêter</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="boutonSuppressionPret">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>690</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>50</y>
+        <width>800</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pageSituationPret">
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>70</y>
+          <width>400</width>
+          <height>350</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLecteurPret">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>50</y>
+           <width>250</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero Lecteur :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="numeroLivrePret">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>150</y>
+           <width>250</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Nom Lecteur:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLecteurPretSituation">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>100</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nomLecteurPretSituation">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>200</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="afficherPret">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>290</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Afficher</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pret">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>20</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/copywriting.png</normaloff>:/images/copywriting.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pageAjoutPret">
+       <widget class="QPushButton" name="pret_2">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>20</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/copywriting.png</normaloff>:/images/copywriting.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_9">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>70</y>
+          <width>400</width>
+          <height>350</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLecteurPret_2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>50</y>
+           <width>250</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero Lecteur :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="numeroLivrePret_2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>150</y>
+           <width>250</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero Livre:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLecteurPretAjout">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>100</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLivrePretAjout">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>200</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ajouterPret">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>290</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Prêter</string>
+         </property>
+        </widget>
+       </widget>
+       <zorder>frame_9</zorder>
+       <zorder>pret_2</zorder>
+      </widget>
+      <widget class="QWidget" name="pageModifierPret">
+       <widget class="QPushButton" name="pret_4">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>10</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/copywriting.png</normaloff>:/images/copywriting.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_10">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>60</y>
+          <width>400</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLecteurPret_3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>50</y>
+           <width>250</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero Lecteur :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="numeroLivrePret_3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>150</y>
+           <width>250</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero Prêt:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLecteurPretModifier">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>100</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroPretModifier">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>200</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="modifierPret">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>380</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Renouveler</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="numeroLivrePret_4">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>260</y>
+           <width>250</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Date de Prêt:</string>
+         </property>
+        </widget>
+        <widget class="QDateEdit" name="datePretModifier">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>310</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+        </widget>
+        <zorder>numeroLecteurPret_3</zorder>
+        <zorder>numeroLivrePret_3</zorder>
+        <zorder>numeroLecteurPretModifier</zorder>
+        <zorder>numeroPretModifier</zorder>
+        <zorder>numeroLivrePret_4</zorder>
+        <zorder>datePretModifier</zorder>
+        <zorder>modifierPret</zorder>
+       </widget>
+       <zorder>frame_10</zorder>
+       <zorder>pret_4</zorder>
+      </widget>
+      <widget class="QWidget" name="pageSupprimerPret">
+       <widget class="QPushButton" name="pret_3">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>30</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="sourceimage.qrc">
+          <normaloff>:/images/copywriting.png</normaloff>:/images/copywriting.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_11">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>100</y>
+          <width>400</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="numeroLivrePret_5">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>40</y>
+           <width>250</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Numero Livre:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="numeroLivrePretSupprimer">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>90</y>
+           <width>300</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+color:rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="supprimerPret">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>150</y>
+           <width>350</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Rendre</string>
+         </property>
+        </widget>
+       </widget>
+       <zorder>frame_11</zorder>
+       <zorder>pret_3</zorder>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="boutonModificationPret">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>480</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="boutonSituationPret">
+      <property name="geometry">
+       <rect>
+        <x>75</x>
+        <y>60</y>
+        <width>150</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Situation</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>125</width>
+        <height>125</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tablePret1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>600</y>
+        <width>800</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0,0,0);</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>N° Livre</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Designation</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Auteur</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Edition</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Prêt</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="boutonRetourPret">
+      <property name="geometry">
+       <rect>
+        <x>1100</x>
+        <y>800</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="sourceimage.qrc">
+        <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="sourceimage.qrc"/>
+ </resources>
+ <connections/>
+</ui>

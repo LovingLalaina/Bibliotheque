@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>bibliotheque.jpg</file>
+        <file>etage.jpg</file>
+        <file>etagere biblio.jpg</file>
+        <file>livre.jpg</file>
+        <file>bois.jpg</file>
+        <file>bois1.jpg</file>
+        <file>bois2.jpg</file>
+        <file>books.png</file>
+        <file>ebook.png</file>
+        <file>exit.png</file>
+        <file>grand livrary.jpg</file>
+        <file>histogram.png</file>
+        <file>home-icon-silhouette.png</file>
+        <file>livre blanc.jpg</file>
+        <file>marbre.jpg</file>
+        <file>old book.jpg</file>
+        <file>pierre.jpg</file>
+        <file>sable.jpg</file>
+        <file>etoile.jpg</file>
+        <file>book.png</file>
+        <file>boss.png</file>
+        <file>eau.jpg</file>
+        <file>lilly.jpg</file>
+        <file>tree.jpg</file>
+        <file>water.jpg</file>
+        <file>archives.png</file>
+        <file>back.png</file>
+        <file>bookmark.png</file>
+        <file>copywriting.png</file>
+        <file>old.png</file>
+        <file>open-book.png</file>
+        <file>warning.png</file>
+    </qresource>
+</RCC>
